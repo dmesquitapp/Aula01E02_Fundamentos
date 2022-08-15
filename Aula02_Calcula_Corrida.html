@@ -1,0 +1,48 @@
+
+
+<input placeholder="Distancia em KM:" id="DistanciaInformada"/>
+<input placeholder="Tempo em minutos:" id="TempoInformado"/>
+<button onclick="CalculaCorrida()"> Calcula </button>
+
+<script>
+/*
+APP de corrida  Inicio do comentario bloco
+Preço fixo
+Tempo
+Preço base
+
+<button onclick="alert('Calculo App');"> Calcula </button>  outro exemplo, um alerto ao clicar em um botao
+*/ 
+
+//VALIDAR COM IF, SE O USUAIRO INFORMOU OS DADOS NO INICIO
+
+//CUIDADO!!!!!!!!! ESCRITA DAS FUNÇÕES MINUSCULAS OU COMO EXATEMENTE ELE MOSTRA
+
+    function FormataMoeda(algumValor) {
+
+        var valorFormatado = algumValor.toFixed(2).replace('.',',');
+        return valorFormatado;
+    }
+
+    function CalculaCorrida() {
+        
+        //utilizando o if
+        IsCampoDistanciaVazio = DistanciaInformada.value=='';
+        if (IsCampoDistanciaVazio) {
+            alert ('NAO INFORMOU OS DOIS CAMPOS!!! FAVOR INFORMAR, POR FAVOR.');
+            return ; //signica PARAR DE EXECUTAR A FUNÇÃO
+        } 
+
+        // Variaveis
+        var TarifaDinamica =  1.4;
+        var TarifaTempo = 0.26;
+        var distanciaKM = DistanciaInformada.value * TarifaDinamica; // utilizar valor do id no calculo 'DistanciaInformada.value '
+        var TempoEmMin= TempoInformado.value * TarifaTempo;
+        var valorDaCorrida = distanciaKM + TempoEmMin;
+
+
+    alert("Calculo da corrida " + FormataMoeda(valorDaCorrida)); //tofixed são as casas depois da virgula
+    }
+</script>
+
+

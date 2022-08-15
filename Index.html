@@ -1,0 +1,51 @@
+<!-- <main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://..." value="https://mariosouto.com" />
+    </header>
+    <iframe src="https://mariosouto.com"></iframe>
+</main> -->
+ <!-- ! +ENTER INICIA O CODIGO PADRAO-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU BROWSER</title>
+</head>
+<body>
+   
+<script>
+
+  // oque tem em uma aba do navegador?
+  var aba1 = {
+        titulo: 'TITULO 1',
+        utl: 'https://omariosouto.github.io/pucpos-code/a2b1/02-browser/style.css'
+    };
+
+    var aba2 = {
+        titulo: 'view-source:https://omariosouto.github.io/pucpos-code/a2b1/02-browser/index.html',
+        URL: 'https://omariosouto.github.io/pucpos-code/a2b1/02-browser/style.css'
+    };
+
+    const ABAS = [
+    aba1,
+    aba2
+
+    ];
+
+    
+      document.body.innerHTML = 'Hello word';
+for (aba of ABAS) {
+    alert(aba.titulo);
+
+}
+
+  
+
+</script>
+<link rel="stylesheet" href="./style.css" />
+</body>
+</html>
